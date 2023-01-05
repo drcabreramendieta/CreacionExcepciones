@@ -5,6 +5,9 @@
  */
 package creacionexcepciones;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author hola
@@ -15,7 +18,13 @@ public class CreacionExcepciones {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            // TODO code application logic here
+            //throw new UnCheckedException("Error");
+            throw new CheckedException("Checked error");
+        } catch (CheckedException ex) {
+            System.out.println(ex);
+        }
     }
     
 }
