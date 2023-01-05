@@ -20,7 +20,7 @@ public class Usuario {
     
     public void verificarEdad() throws AccessLevelException{
         if(edad < 18){
-            throw new AccessLevelException("Es menor de edad con "+edad+" años");
+            throw new AccessLevelException(new UnCheckedException("No chequeada"));
         }
         else{
             System.out.println("Es mayor de edad");
