@@ -21,8 +21,9 @@ public class CreacionExcepciones {
         try {
             // TODO code application logic here
             //throw new UnCheckedException("Error");
-            throw new CheckedException("Checked error");
-        } catch (CheckedException ex) {
+            Usuario u1 = new Usuario("pepe",17);
+            u1.verificarEdad();
+        } catch (AccessLevelException ex) {
             System.out.println(ex);
         }
     }
